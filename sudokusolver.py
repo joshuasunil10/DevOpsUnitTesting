@@ -1,12 +1,6 @@
 def solve_sudoku(board):
-    """Solves the Sudoku puzzle using backtracking.
-    Args:
-        board (list): A 9x9 list of lists representing the Sudoku board. Empty cells should be 0.
-    Returns:
-        list or None: The solved board as a list or None if unsolvable.
-    """
+    
     def is_valid_move(board, row, col, num):
-        """Checks if placing num at (row, col) is valid."""
         for i in range(9):
             if board[row][i] == num or board[i][col] == num:
                 return False
@@ -16,6 +10,8 @@ def solve_sudoku(board):
                 if board[r][c] == num:
                     return False
         return True
+    
+    
 
     def solve():
         for row in range(9):
